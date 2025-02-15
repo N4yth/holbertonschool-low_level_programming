@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * print_alphabet - ...
+ * print_alphabet_x10 - display 10 time the alphabet in lowercase using
+ * 2 for loop
  *
  * Return: nothing
  */
