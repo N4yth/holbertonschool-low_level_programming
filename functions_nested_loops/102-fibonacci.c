@@ -12,7 +12,7 @@ int main(void)
 	long int save;
 
 	printf("1, 2");
-	for (i = 1 ; i <= 52 ; i++)
+	for (i = 1 ; i <= 48 ; i++)
 	{
 		save = old;
 		old = new;
