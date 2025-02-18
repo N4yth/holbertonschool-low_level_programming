@@ -4,7 +4,7 @@
  *
  * Return: nothing
  */
-void main(void)
+int main(void)
 {
 	int i;
 	int sum_result = 0;
@@ -17,4 +17,5 @@ void main(void)
 			sum_result += i;
 	}
 	printf("%d\n", sum_result);
+	return (0);
 }
