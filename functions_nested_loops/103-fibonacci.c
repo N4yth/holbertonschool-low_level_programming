@@ -10,18 +10,18 @@ int main(void)
 	long int old = 1;
 	long int new = 2;
 	long int save;
+	long int result_sum = 0;
 
-	printf("1, 2");
 	for (i = 1 ; new < 4000000 ; i++)
 	{
 		save = old;
 		old = new;
 		new = new + save;
-		if (new < 4000000)
+		if ((new % 2) == 0)
 		{
-			printf(", %ld", new);
+			result_sum += new;
 		}
 	}
-	printf("\n");
+	printf("%ld\n", result_sum);
 	return (0);
 }
