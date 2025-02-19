@@ -17,7 +17,7 @@ int main(void)
 		save = old;
 		old = new;
 		new = new + save;
-		printf(", %.0lf", new);
+		printf(", %g", new);
 	}
 	printf("\n");
 	return (0);
