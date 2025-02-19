@@ -10,7 +10,7 @@ int main(void)
 	long int old = 1;
 	long int new = 2;
 	long int save;
-	long int result_sum = 0;
+	long int result_sum = 2;
 
 	for (i = 1 ; new < 4000000 ; i++)
 	{
