@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _isupper - use to know if a charachter is uppercase or not
  * @c: the character to test
@@ -8,8 +7,8 @@
  */
 int _isupper(int c)
 {
-	if (c > 64 && 91 < c)
-		return (1);
-	else
+	if (c >= 65 && 90 <= c)
 		return (0);
+	else
+		return (1);
 }
