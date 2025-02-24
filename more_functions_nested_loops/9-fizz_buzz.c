@@ -1,0 +1,36 @@
+#include <stdio.h>
+/**
+ * fizzbuzz - fizzbuzz exercice
+ *
+ * Return: nothing
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 0 ; i <= 100 ; i++)
+	{
+		if (i % 3 == 0)
+		{
+			if (i % 5 ==0)
+			{
+				printf("FizzBuzz ");
+			}
+			else 
+			{
+				printf("Fizz ");
+			}
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", i);
+		}
+
+	}
+	printf("\n");
+	return (0);
+}
