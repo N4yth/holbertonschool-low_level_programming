@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_line - display X times _
- * @n: the number of times to print _ 
+ * @n: the number of times to print _
  *
  * Return: nothing
  */
