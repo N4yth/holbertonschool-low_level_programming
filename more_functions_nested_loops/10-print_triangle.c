@@ -11,7 +11,7 @@ void print_triangle(int size)
 	int space;
 	int actual_length;
 
-	if (size >= 0)
+	if (size > 0)
 	{
 		for (row = 1 ; row <= size ; row++)
 		{
