@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * fizzbuzz - fizzbuzz exercice
+ * main - fizzbuzz exercice
  *
  * Return: nothing
  */
@@ -12,11 +12,11 @@ int main(void)
 	{
 		if (i % 3 == 0)
 		{
-			if (i % 5 ==0)
+			if (i % 5 == 0)
 			{
 				printf("FizzBuzz");
 			}
-			else 
+			else
 			{
 				printf("Fizz");
 			}
@@ -30,8 +30,9 @@ int main(void)
 			printf("%d", i);
 		}
 		if (i != 100)
-		       printf(" ");	
-
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 	return (0);
