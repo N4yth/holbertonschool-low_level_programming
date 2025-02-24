@@ -7,11 +7,11 @@
  */
 int _strlen(char *s)
 {
-	int sum;
+	int sum = 0;
 
 	for (; *s ; s++)
 	{
-		sum += sizeof(*s);
+		sum += 1;
 	}
 	return (sum);
 }
