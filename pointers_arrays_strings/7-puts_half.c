@@ -1,8 +1,8 @@
 #include"main.h"
 #include "2-strlen.c"
 /**
- * puts2 - programme that print some character from a string
- * @s: the string to print
+ * puts_half - print only half of a string
+ * @str: the string to print
  *
  * Return: null
  */
@@ -15,7 +15,7 @@ void puts_half(char *str)
 	{
 		if (length % 2 != 0)
 		{
-			length -= 1;
+			length += 1;
 		}
 			for (i = length / 2 ; i <= length - 1 ; i++)
 			{
