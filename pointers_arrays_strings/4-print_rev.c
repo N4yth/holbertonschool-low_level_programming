@@ -11,7 +11,7 @@ void print_rev(char *str)
 	int recursive = 0, i;
 
 	recursive = _strlen(str);
-	for (i = recursive; i >= 0 ; i--)
+	for (i = recursive; i > 0 ; i--)
 	{
 		_putchar(str[i]);
 	}
