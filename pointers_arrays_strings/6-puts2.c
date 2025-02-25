@@ -1,8 +1,8 @@
 #include"main.h"
 #include "2-strlen.c"
 /**
- * rev_string - reverse a string
- * @s: the string to reverse
+ * puts2 - programme that print some character from a string
+ * @s: the string to print
  *
  * Return: null
  */
