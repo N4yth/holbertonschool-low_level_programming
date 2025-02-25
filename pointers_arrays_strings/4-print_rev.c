@@ -11,9 +11,12 @@ void print_rev(char *str)
 	int recursive = 0, i;
 
 	recursive = _strlen(str);
-	for (i = recursive; i >= 0 ; i--)
+	if (recursive > 0)
 	{
-		_putchar(str[i]);
+		for (i = recursive - 1; i >= 0 ; i--)
+		{
+			_putchar(str[i]);
+		}
 	}
 	_putchar('\n');
 }
