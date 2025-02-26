@@ -1,6 +1,4 @@
 #include"main.h"
-#include "9-strcpy.c"
-#include "_putchar.c"
 /**
  * _strncpy - take 2 string to cpy the second into the first
  * @dest: the destination string
