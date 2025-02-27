@@ -16,9 +16,9 @@ int _strcmp(char *s1, char *s2)
 	length_s2 = _strlen(s2);
 
 	if (length_s1 < length_s2)
-		result = -15;
+		result = 13;
 	else if (length_s1 > length_s2)
-		result = 15;
+		result = -13;
 	else
 		result = 0;
 
