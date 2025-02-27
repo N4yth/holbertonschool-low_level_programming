@@ -32,6 +32,8 @@ char *cap_string(char *str)
 	int length, i;
 
 	length = _strlen(str);
+	if (str[0] >= 'a' && str[0] <= 'z')
+		str[0] = str[0] - 'a' + 'A';
 	for (i = 0; i < length ; i++)
 	{
 		if (verif(str[i]))
