@@ -38,7 +38,7 @@ char *cap_string(char *str)
 	for (i = 1; i < length ; i++)
 	{
 		if (!verif(str[i]) && verif(str[i - 1]) &&
-				(str[i] < 'A' || str[i] > 'Z') && 
+				(str[i] < 'A' || str[i] > 'Z') &&
 				str[i] != '0')
 		{
 			str[i] = str[i] - 'a' + 'A';
