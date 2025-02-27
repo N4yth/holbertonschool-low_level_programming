@@ -1,5 +1,6 @@
 #include "main.h"
 #include "2-strlen.c"
+#include <stdio.h>
 /**
  * verif - verif verifie if the char is equal to the selection
  * @test_char: the character test
@@ -34,16 +35,13 @@ char *cap_string(char *str)
 	length = _strlen(str);
 	if (str[0] >= 'a' && str[0] <= 'z')
 		str[0] = str[0] - 'a' + 'A';
-	for (i = 0; i < length ; i++)
+	for (i = 1; i < length ; i++)
 	{
-		if (verif(str[i]))
+		if (!verif(str[i]) && verif(str[i - 1]) &&
+				(str[i] < 'A' || str[i] > 'Z') && s
+				tr[i] != '0')
 		{
-			if (!verif(str[i + 1]) && (str[i + 1] < 'A' || str[i + 1] > 'Z'))
-			{
-
-				str[i + 1] = str[i + 1] - 'a' + 'A';
-				i = i + 2;
-			}
+			str[i] = str[i] - 'a' + 'A';
 		}
 	}
 	return (str);
