@@ -9,8 +9,8 @@
  */
 int _atoi(char *s)
 {
-	int signe = 1, bool_start = 0, result = 0;
-
+	int digit, signe = 1, bool_start = 0, result = 0;
+	
 	for (; *s ; s++)
 	{
 		if (*s == '-')
@@ -19,13 +19,13 @@ int _atoi(char *s)
 		if (*s >= '0' && *s <= '9')
 		{
 			bool_start = 1;
-			result = result * 10 + (*s - '0');
+			digit = (*s - '0') * signe;
+			result = result * 10 + digit;
 		}
 		else if (bool_start == 1)
 		{
 			break;
 		}
 	}
-	result *= signe;
 	return (result);
 }
