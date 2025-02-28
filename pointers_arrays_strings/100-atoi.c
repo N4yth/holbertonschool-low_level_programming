@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	int digit, signe = 1, bool_start = 0, result = 0;
-	
+
 	for (; *s ; s++)
 	{
 		if (*s == '-')
