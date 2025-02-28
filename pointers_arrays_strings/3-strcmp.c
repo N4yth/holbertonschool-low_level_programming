@@ -10,17 +10,24 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int result, length_s1, length_s2;
+	int i, result = 0, length_s1, length_s2, length = 0;
 
 	length_s1 = _strlen(s1);
 	length_s2 = _strlen(s2);
 
 	if (length_s1 < length_s2)
-		result = s1[0] - s2[0];
+		length = length_s1;
 	else if (length_s1 > length_s2)
-		result = s1[0] - s2[0];
-	else
-		result = 0;
+		length = length_s2;
+
+	for (i = 0 ; i < length ; i++)
+	{
+		if (s2[i] != s1[i])
+		{
+			result = s1[i] - s2[i];
+			break;
+		}
+	}
 
 	return (result);
 }
