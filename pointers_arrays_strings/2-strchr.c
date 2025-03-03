@@ -1,5 +1,4 @@
 #include"main.h"
-#include "strlen.c"
 #include <stdlib.h>
 /**
  * _strchr - look into a array to see if there is a the given chracter
@@ -11,16 +10,13 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, length;
-
-	length = _strlen(s);
 	if (c != '\0')
 	{
-		for (i = 0 ; i < length ; i++)
+		for (; *s ; s++)
 		{
-			if (s[i] == c)
+			if (*s == c)
 			{
-				return (&s[i]);
+				return (s);
 			}
 		}
 	}
