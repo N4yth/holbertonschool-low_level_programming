@@ -1,6 +1,5 @@
 #include"main.h"
 #include "strlen.c"
-#include "_putchar.c"
 /**
  * _strchr - look into a array to see if there is a the given chracter
  * @s: the array to look into
