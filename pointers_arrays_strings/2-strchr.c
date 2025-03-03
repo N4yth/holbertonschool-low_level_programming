@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	int i, length;
 
 	length = _strlen(s);
-	if (c != '\0)
+	if (c != '\0')
 	{
 		for (i = 0 ; i < length ; i++)
 		{
