@@ -1,12 +1,11 @@
 #include"main.h"
 #include "strlen.c"
 /**
- * _strchr - look into a array to see if there is a the given chracter
+ * _strpbrk - look into a array to see if there is a character from the list
  * @s: the array to look into
- * @c: the character to look
+ * @accept: the array of character to look
  *
- * Return: NULL if the character is not found and overwise the adresse
- * of the first occurence
+ * Return: the first occurence of one of the caractere
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -15,7 +14,7 @@ char *_strpbrk(char *s, char *accept)
 	length = _strlen(s);
 	for (; *s ; s++)
 	{
-		for (i = 0 ; i < length - 1 ; i++)
+		for (i = 0 ; i < length ; i++)
 		{
 			if (*s == accept[i])
 			{
