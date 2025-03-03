@@ -27,8 +27,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (count == length_nee - 1)
 		{
-			return (&haystack[i]);
+			return (&haystack[i - count + 1]);
 		}
+		if (haystack[i] == ' ')
+			count = 0;
 	}
-	return (haystack);
+	return ('\0');
 }
