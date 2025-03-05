@@ -1,7 +1,7 @@
 #include"main.h"
 #include <stdio.h>
 /**
- * main - affiche chaque arguement 
+ * main - affiche chaque arguement
  * @argc: the length of the array argv
  * @argv: all the parameter give to the main
  *
