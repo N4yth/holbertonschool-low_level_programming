@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		{
 			test = argv[i];
 			for (; *test ; test++)
-			{	
+			{
 				if (*test < 48 || *test > 57)
 				{
 					printf("Error\n");
