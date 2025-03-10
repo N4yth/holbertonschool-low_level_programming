@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	size_1 = _strlen(s1);
 	size_2 = _strlen(s2);
-	arr_conca = malloc((sizeof(char) * size_1) + (sizeof(char) * size_2) - 1);
+	arr_conca = malloc((sizeof(char) * size_1) + (sizeof(char) * size_2) + 1);
 	if (arr_conca == NULL)
 	{
 		return (NULL);
