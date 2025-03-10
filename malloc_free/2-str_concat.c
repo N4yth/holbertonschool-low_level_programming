@@ -14,9 +14,12 @@ char *str_concat(char *s1, char *s2)
 	int i, size_1, size_2;
 	char *arr_conca;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	size_1 = _strlen(s1);
 	size_2 = _strlen(s2);
-
 	arr_conca = malloc((sizeof(char) * size_1) + (sizeof(char) * size_2));
 	if (arr_conca == NULL)
 	{
