@@ -2,11 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * create_array - create an array
- * @c: the char use to fill the array
- * @size: the size of array
+ * _strdup - create a copy of an array
+ * @str: the array to copy
  *
- * Return: the array wanted
+ * Return: the copy array
  */
 char *_strdup(char *str)
 {
@@ -22,7 +21,7 @@ char *_strdup(char *str)
 		i++;
 		size++;
 	}
-	cpy_arr = malloc(sizeof(char) * size);
+	cpy_arr = malloc(sizeof(char) * size + 1);
 	if (cpy_arr == NULL)
 	{
 		return (NULL);
