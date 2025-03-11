@@ -1,13 +1,10 @@
 #include "main.h"
-#include "strlen.c"
 #include <stdlib.h>
-#include <stdio.h>
 /**
- * str_concat - concatenate 2 array in a new array
- * @s1: the first array to concatenate
- * @s2: the seconde array to concatenate
+ * malloc_checked - alocate a place in the memory
+ * @b: the size to alocate memory
  *
- * Return: the new concatenate array
+ * Return: the pointer
  */
 void *malloc_checked(unsigned int b)
 {
