@@ -4,17 +4,17 @@
 #include <stdio.h>
 
 /**
- * free_grid - free a grid
- * @grid: the grid to free
- * @height: height of the grid
+ * argstostr - concatenate all argument given by the main
+ * @ac: the number of argument
+ * @av: the list of argument
  *
- * Return: nothing
+ * Return: the array wanted
  */
 char *argstostr(int ac, char **av)
 {
 	char *str_out;
 	int i, prog = 0, sec_i, count = 0, size;
-	
+
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
