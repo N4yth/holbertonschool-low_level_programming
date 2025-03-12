@@ -1,16 +1,20 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * _strpbrk - look into a array to see if there is a character from the list
- * @s: the array to look into
- * @accept: the array of character to look
+ * init_dog - initialize a dog type variable
+ * @d: the dog variable create
+ * @name: the name to give to the dog variable
+ * @age: the age to give to the dog variable
+ * @owner: the owner to give to the dog variable
  *
- * Return: the first occurence of one of the caractere
+ * Return: nothing
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+	if (d != NULL)
+	{
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
+	}
 }
