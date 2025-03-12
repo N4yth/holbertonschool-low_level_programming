@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * new_dog - ..
  * @name: the name of the new dog
@@ -11,7 +12,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *name_save, *owner_save;
-	dog_t *other_dog, *save;
+	dog_t *other_dog;
 
 	name_save = malloc(sizeof(char *));
 	if  (name_save == NULL)
@@ -26,24 +27,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(owner_save);
 		return (NULL);
 	}
-	save = malloc(sizeof(dog_t));
-	if (save == NULL)
-	{
-		free(name_save);
-		free(owner_save);
-		free(save);
-		return (NULL);
-	}
-	*name_save = *name;
-	*owner_save = *owner;
-
-	save->name = name_save;
-	save->owner = owner_save;
+	strcpy(name_save, name);
+	strcpy(owner_save, owner);
 
 	other_dog = malloc(sizeof(dog_t));
 	if (other_dog == NULL)
 	{
-		free(save);
 		free(other_dog);
 		free(name_save);
 		free(owner_save);
