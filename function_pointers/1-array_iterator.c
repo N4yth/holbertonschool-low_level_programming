@@ -1,9 +1,10 @@
 #include "function_pointers.h"
 
 /**
- * print_name - print a name using a pointer of function
- * @name: the name
- * @f: the function use to print
+ * array_iterator - iterate on an aray using un pointer to function
+ * @array: the array to print
+ * @size: the size of the array to print
+ * @action: the function that is used to print
  *
  * Return: Nothing.
  */
