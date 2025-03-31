@@ -22,6 +22,6 @@ int sum_dlistint(dlistint_t *head)
 		count += head->n;
 		head = head->next;
 	}
-	count += head->n;	
+	count += head->n;
 	return (count);
 }
