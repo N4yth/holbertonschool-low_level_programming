@@ -1,6 +1,7 @@
-#include <stddef.h>
 #ifndef STRINGLY_LIST
 #define STRINGLY_LIST
+
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
