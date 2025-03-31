@@ -13,10 +13,14 @@ int sum_dlistint(dlistint_t *head)
 {
 	unsigned int count = 0;
 
-	while (head->next != NULL)
+	if (head == NULL)
 	{
+		return (0);
+	}
+	do {
 		head = head->next;
 		count += head->n;
-	}
+	} while (head->next);
+
 	return (count);
 }
