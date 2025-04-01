@@ -39,7 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (new_node == NULL)
 		return (NULL);
-	if (*h == NULL)
+	if (h == NULL)
 		return (0);
 	if (idx == 0)
 	{
@@ -70,5 +70,3 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	retur_to_head(h, i);
 	return (new_node);
 }
-
-
