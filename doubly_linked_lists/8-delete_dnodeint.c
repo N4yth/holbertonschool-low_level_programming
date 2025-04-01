@@ -5,17 +5,18 @@
 #include "1-dlistint_len.c"
 
 /**
- * insert_dnodeint_at_index - add a new node the the choosen coordinate
+ * delete_dnodeint_at_index - function that delete a node in a doubly linked
+ * list
  *
- * @h: the head of the doubly linked list
- * @idx: the coordinate to put the new node
- * @n: the int of the new node
+ * @head: the head of the doubly linked list
+ * @index: the coordinate to delete the  node
  *
- * Return: the new node
+ * Return: 1 if it work -1 if it fails
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *current = *head;
+	unsigned int constan_index = index;
 
 	if (*head == NULL || dlistint_len(*head) < index)
 		return (-1);
@@ -30,16 +31,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (current->next == NULL && current->prev == NULL)
 	{
 		free(current);
+		*head = NULL;
 		return (1);
 	}
 	if (current->next == NULL)
-	{
 		current->prev->next = NULL;
-	}
 	else
-	{
 		current->next->prev = current->prev;
-	}
 	if (current->prev == NULL)
 	{
 		current->next->prev = NULL;
@@ -48,7 +46,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		current->prev->next = current->next;
 	}
-	if (index == 0)
+	if (constan_index == 0)
 	{
 		*head = (*head)->next;
 	}
