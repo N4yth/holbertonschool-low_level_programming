@@ -17,13 +17,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fb;
 	ssize_t num;
-	char buf[10000];
+	char buf[2048];
 
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	fb = open(filename, O_RDONLY, 0400);
+	fb = open(filename, O_RDONLY, 400);
 	if (fb == -1)
 	{
 		return (0);
