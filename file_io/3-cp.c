@@ -17,7 +17,8 @@
  */
 int main(int nb_args, char **args)
 {
-	ssize_t buffer[1024], write_result = 1, to_write = 1, size = 1024;
+	char buffer[1024];
+	ssize_t write_result = 1, to_write = 1;
 	int close_val, file_from, file_to;
 
 	if (nb_args != 3)
@@ -29,7 +30,7 @@ int main(int nb_args, char **args)
 	file_to = open(args[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	while (to_write > 0)
 	{
-		to_write = read(file_from, buffer, size);
+		to_write = read(file_from, buffer, sizeof(buffer));
 		if (file_from == -1 || to_write == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
