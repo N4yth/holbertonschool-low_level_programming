@@ -22,7 +22,7 @@ int main(int nb_args, char **args)
 
 	if (nb_args != 3)
 	{
-		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	file_from = open(args[1], O_RDONLY, 0600);
@@ -32,20 +32,20 @@ int main(int nb_args, char **args)
 		to_write = read(file_from, buffer, size);
 		if (file_from == -1 || to_write == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", args[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
 			exit(98);
 		}
 		write_result = write(file_to, buffer, to_write);
 		if (write_result == -1 || file_to == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", args[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", args[2]);
 			exit(99);
 		}
 	}
 	close_val = close(file_from);
 	if (close_val == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close %d\n", close_val);
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", close_val);
 		exit(100);
 	}
 	close_val = close(file_to);
