@@ -16,7 +16,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fb;
-	ssize_t num;
+	ssize_t num, resu;
 	char buf[2048];
 
 	if (filename == NULL)
@@ -33,7 +33,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	if (write(STDIN_FILENO, buf, num) == -1)
+	resu = write(STDOUT_FILENO, buf, num);
+	if (resu == -1)
 	{
 		return (0);
 	}
@@ -41,6 +42,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	return (num);
+	return (resu);
 
 }
