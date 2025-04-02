@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	fb = open(filename, O_RDONLY, 0777);
+	fb = open(filename, O_RDONLY, 0400);
 	if (fb == -1)
 	{
 		return (0);
