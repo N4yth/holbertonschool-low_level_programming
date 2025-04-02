@@ -26,7 +26,7 @@ int main(int nb_args, char **args)
 		exit(97);
 	}
 	file_from = open(args[1], O_RDONLY, 0600);
-	file_to = open(args[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	file_to = open(args[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	while (to_write > 0)
 	{
 		to_write = read(file_from, buffer, size);
