@@ -17,7 +17,7 @@
  */
 int main(int nb_args, char **args)
 {
-	ssize_t buffer[1024], write_result = 1, to_write = 1, size = 1024;
+	ssize_t buffer[1023], write_result = 1, to_write = 1, size = 1023;
 	int close_val, file_from, file_to;
 
 	if (nb_args != 3)
