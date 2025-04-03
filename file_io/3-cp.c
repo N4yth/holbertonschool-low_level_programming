@@ -28,20 +28,21 @@ int main(int nb_args, char **args)
 	}
 	file_from = open(args[1], O_RDONLY, 0600);
 	file_to = open(args[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	to_write = read(file_from, buffer, sizeof(buffer));
 	while (to_write > 0)
 	{
-		to_write = read(file_from, buffer, sizeof(buffer));
-		if (file_from == -1 || to_write == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
-			exit(98);
-		}
 		write_result = write(file_to, buffer, to_write);
 		if (write_result == -1 || file_to == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", args[2]);
 			exit(99);
 		}
+		to_write = read(file_from, buffer, sizeof(buffer));
+	}
+	if (file_from == -1 || to_write == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", args[1]);
+		exit(98);
 	}
 	close_val = close(file_from);
 	if (close_val == -1)
